@@ -28,6 +28,10 @@ export default function TextForm(props) {
    
         setText("");
     }
+    const count=(element)=>
+    {
+      return element.length!==0;
+    }
    
 
     const [Text, setText] = useState("");
@@ -38,7 +42,7 @@ export default function TextForm(props) {
 
 <div className="mb-3" >
     
-  <textarea className="form-control" style={{backgroundColor: props.mode==='dark'?'#343a40':'white',color: props.mode==='dark'?'white':'dark'}} onChange={OnChange} value= {Text} id="TextBox" rows="10"></textarea>
+  <textarea className="form-control" style={{backgroundColor: props.mode==='dark'?'#343a40':'white',color: props.mode==='dark'?'white':'343a40'}} onChange={OnChange} value= {Text} id="TextBox" rows="10"></textarea>
 </div >
 <button className="btn btn-primary" onClick={HandleUpClick}>Convert To UpperCase</button>
 <button className="btn btn-primary mx-3" onClick={HandleloClick}>Convert To LowerCase</button>
@@ -47,8 +51,8 @@ export default function TextForm(props) {
 <div className="container my-3 mx-2" style={{color: props.mode==='dark'?'white':'black'}}>
 <h2>Summary</h2>
 
-<p><b>{Text.split(" ").length}</b> Words And <b>{Text.length}</b> Characters</p>
-<p>Time Require to read: <b>{Text.split(" ").length * 0.008-0.008} minutes </b>.</p>
+<p><b>{Text.split(" ").filter(count).length}</b> Words And <b>{Text.length}</b> Characters</p>
+<p>Time Require to read: <b>{Text.split(" ").filter(count).length * 0.008-0.008} minutes </b>.</p>
 <h3 className='my-3 '>Preview</h3>
 <p>{Text}</p>
 
