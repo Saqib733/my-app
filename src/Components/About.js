@@ -13,6 +13,7 @@ export default function About() {
     
     const ToggleMode= ()=>
     {
+      
         if(MyStyle.color==="black")
         {
         SetStyle
