@@ -5,8 +5,8 @@ export default function About(props) {
 
    let MyStyle={
     
-    color:props.Mode=="dark"?"white":"black",
-    backgroundColor: props.Mode=="dark"?"#343a40":"white"
+    color:props.Mode==="dark"?"white":"black",
+    backgroundColor: props.Mode==="dark"?"#343a40":"white"
       
     
    }
