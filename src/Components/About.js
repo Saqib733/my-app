@@ -20,9 +20,10 @@ export default function About() {
             color: 'white',
             backgroundColor:'black'
             
-
         })
         SetType("Light Mode")
+
+        
     }
     else
     {
